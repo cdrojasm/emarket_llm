@@ -3,4 +3,4 @@
 *.pyc
 venv
 /postgres_data
-/data
+/chroma_data
