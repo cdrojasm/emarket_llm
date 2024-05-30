@@ -3,6 +3,7 @@ from langchain_community.document_loaders import JSONLoader
 from langchain_openai import OpenAI
 from langchain.chains import LLMChain
 from dotenv import load_dotenv
+from vector_store import EVMarketVectorStore
 
 load_dotenv()
 
@@ -44,7 +45,7 @@ class EMarketResponseApp:
         """ add json parser """
         print(response)
 
-    def check_if_sentence_could_be_resolve(self, sentence):
+    def check_if_sentence_could_be_response(self, sentence):
         sentence_class_prompt_str = "Puedes decir si la siguiente oracion es una respuesta ? tenga en cuenta que no es necesario el uso de signos de admiracion {sentence}"
         sentence_class_prompt = PromptTemplate.from_template(
             sentence_class_prompt_str)
