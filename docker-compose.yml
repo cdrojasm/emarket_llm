@@ -15,4 +15,4 @@ services:
         volumes:
           - ./chroma_data:/chroma/.chroma/index
         ports:
-          - ${DEPLOYMENT_CHROMA_DB_PORT}:8080
+          - ${DEPLOYMENT_CHROMA_DB_PORT}:8000
